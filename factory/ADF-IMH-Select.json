@@ -1,0 +1,9 @@
+{
+	"name": "ADF-IMH-Select",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "325e8808-ac6a-44b7-ae3c-10b43fcb2460",
+		"tenantId": "9329c02a-4050-4798-93ae-b6e37b19af6d"
+	}
+}
