@@ -155,11 +155,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "\nSELECT SchemaName, TableName\nFROM dbo.IngestTableList\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "SQL_DB",
+						"referenceName": "npparam_db",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
