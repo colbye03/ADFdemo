@@ -5,6 +5,8 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -119,7 +121,10 @@
 									"referenceName": "SQL_DB",
 									"type": "DatasetReference",
 									"parameters": {
-										"TableName": "@item().SchemaName",
+										"TableName": {
+											"value": "@item().TableName",
+											"type": "Expression"
+										},
 										"SchemaName": "@item().SchemaName"
 									}
 								}
