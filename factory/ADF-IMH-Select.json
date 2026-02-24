@@ -9,6 +9,10 @@
 			"SalesSchema": {
 				"type": "string",
 				"value": " SalesLT"
+			},
+			"bronze": {
+				"type": "string",
+				"value": "bronze"
 			}
 		}
 	},
