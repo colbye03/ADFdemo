@@ -5,6 +5,10 @@
 			"Environment": {
 				"type": "string",
 				"value": "Dev"
+			},
+			"Environemnt": {
+				"type": "string",
+				"value": "Test"
 			}
 		}
 	},
