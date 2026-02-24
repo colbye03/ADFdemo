@@ -17,6 +17,10 @@
 			"p_container_gold": {
 				"type": "string",
 				"value": "gold"
+			},
+			"P_sql_server": {
+				"type": "string",
+				"value": "eddemodb.database.windows.net"
 			}
 		}
 	},
