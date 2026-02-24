@@ -9,10 +9,10 @@
 			"value": "https://edscxdemos.dfs.core.windows.net/"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
-			"value": "eddemodb.database.windows.net"
+			"value": "@{linkedService().p_sqlserver}"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_database": {
-			"value": "demodb"
+			"value": "@{linkedService().p_sqldb}"
 		}
 	}
 }

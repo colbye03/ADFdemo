@@ -13,11 +13,11 @@
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "eddemodb.database.windows.net"
+			"defaultValue": "@{linkedService().p_sqlserver}"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "demodb"
+			"defaultValue": "@{linkedService().p_sqldb}"
 		},
 		"containerUri": {
 			"type": "string",
