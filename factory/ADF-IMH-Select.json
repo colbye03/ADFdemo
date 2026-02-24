@@ -6,10 +6,6 @@
 				"type": "string",
 				"value": "Dev"
 			},
-			"pTableName": {
-				"type": "string",
-				"value": " "
-			},
 			"SalesSchema": {
 				"type": "string",
 				"value": " SalesLT"
