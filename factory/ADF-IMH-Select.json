@@ -10,7 +10,7 @@
 				"type": "string",
 				"value": " "
 			},
-			"SchemaName": {
+			"SalesSchema": {
 				"type": "string",
 				"value": " SalesLT"
 			}
