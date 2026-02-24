@@ -21,6 +21,10 @@
 			"P_sql_server": {
 				"type": "string",
 				"value": "eddemodb.database.windows.net"
+			},
+			"p_sql_db": {
+				"type": "string",
+				"value": "AdventureworksLT"
 			}
 		}
 	},
