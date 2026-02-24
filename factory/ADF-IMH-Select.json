@@ -13,6 +13,10 @@
 			"p_container_silver": {
 				"type": "string",
 				"value": "silver"
+			},
+			"p_container_gold": {
+				"type": "string",
+				"value": "gold"
 			}
 		}
 	},
