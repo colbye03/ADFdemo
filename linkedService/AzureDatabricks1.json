@@ -1,16 +1,6 @@
 {
 	"name": "AzureDatabricks1",
 	"properties": {
-		"parameters": {
-			"SecretName": {
-				"type": "string",
-				"defaultValue": "DBX-Test"
-			},
-			"ClusterVersion": {
-				"type": "string",
-				"defaultValue": "17.2 Photon (includes Apache Spark 4.0.0, Scala 2.13)"
-			}
-		},
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
