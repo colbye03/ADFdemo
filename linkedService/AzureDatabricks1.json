@@ -1,0 +1,36 @@
+{
+	"name": "AzureDatabricks1",
+	"properties": {
+		"parameters": {
+			"SecretName": {
+				"type": "string",
+				"defaultValue": "DBX-Test"
+			},
+			"ClusterVersion": {
+				"type": "string",
+				"defaultValue": "17.2 Photon (includes Apache Spark 4.0.0, Scala 2.13)"
+			}
+		},
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-434963360491059.19.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "DBX-Token"
+			},
+			"instancePoolId": "0224-230527-rigid2-pool-2q99t57g",
+			"newClusterNumOfWorker": "1",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "17.2.x-photon-scala2.13",
+			"newClusterInitScripts": [],
+			"clusterOption": "Fixed"
+		}
+	}
+}
