@@ -5,6 +5,10 @@
 			"p_env": {
 				"type": "string",
 				"value": "dev"
+			},
+			"p_container_bronze": {
+				"type": "string",
+				"value": "bronze"
 			}
 		}
 	},
