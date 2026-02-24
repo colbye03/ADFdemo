@@ -18,9 +18,15 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
 						"type": "ParquetSink",
@@ -43,12 +49,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SQL_DB",
-						"type": "DatasetReference",
-						"parameters": {
-							"TableName": "address",
-							"SchemaName": "salesLT"
-						}
+						"referenceName": "ds_landing_order_items",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
