@@ -9,6 +9,10 @@
 			"pTableName": {
 				"type": "string",
 				"value": " "
+			},
+			"p_SchemaName": {
+				"type": "string",
+				"value": " "
 			}
 		}
 	},
