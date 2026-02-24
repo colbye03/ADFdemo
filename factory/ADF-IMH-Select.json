@@ -9,6 +9,10 @@
 			"p_container_bronze": {
 				"type": "string",
 				"value": "bronze"
+			},
+			"p_container_silver": {
+				"type": "string",
+				"value": "silver"
 			}
 		}
 	},
