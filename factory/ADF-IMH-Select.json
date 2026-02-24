@@ -10,9 +10,9 @@
 				"type": "string",
 				"value": " "
 			},
-			"p_SchemaName": {
+			"SchemaName": {
 				"type": "string",
-				"value": " "
+				"value": " SalesLT"
 			}
 		}
 	},
