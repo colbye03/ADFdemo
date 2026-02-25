@@ -161,8 +161,33 @@
 					"referenceName": "AzureDatabricks1",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Fail1",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "ForEach_table",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Check Logs ForEach Activity failed",
+					"errorCode": {
+						"value": "@activity('Copy data').error.code",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"parameters": {
+			"errorcode": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
