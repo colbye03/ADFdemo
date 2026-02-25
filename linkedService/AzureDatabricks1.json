@@ -13,14 +13,7 @@
 				},
 				"secretName": "DBX-Token"
 			},
-			"instancePoolId": "0224-230527-rigid2-pool-2q99t57g",
-			"newClusterNumOfWorker": "1",
-			"newClusterSparkEnvVars": {
-				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
-			},
-			"newClusterVersion": "17.2.x-photon-scala2.13",
-			"newClusterInitScripts": [],
-			"clusterOption": "Fixed"
+			"existingClusterId": "0225-002115-8clzaeu4"
 		}
 	}
 }
