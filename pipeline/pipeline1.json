@@ -39,12 +39,14 @@
 									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "ParquetSink",
+									"type": "DelimitedTextSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "ParquetWriteSettings"
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".csv"
 									}
 								},
 								"enableStaging": false,
@@ -59,7 +61,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "SQL_DB",
+									"referenceName": "ds_AzSQLDb_Source",
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
@@ -72,16 +74,19 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Parquet1",
+									"referenceName": "ds_adls_csv",
 									"type": "DatasetReference",
 									"parameters": {
-										"filename": {
+										"FileName": {
 											"value": "@item()",
 											"type": "Expression"
 										},
-										"folder": "Dev",
-										"containername": {
+										"FileSystem": {
 											"value": "@pipeline().globalParameters.bronze",
+											"type": "Expression"
+										},
+										"Directory": {
+											"value": "@pipeline().globalParameters.Environment",
 											"type": "Expression"
 										}
 									}
@@ -111,7 +116,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "npparam_db",
+						"referenceName": "ds_nonparamSQL_Source",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -120,6 +125,8 @@
 			{
 				"name": "Notebook1",
 				"type": "DatabricksNotebook",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ForEach_table",
@@ -165,6 +172,8 @@
 			{
 				"name": "Fail1",
 				"type": "Fail",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ForEach_table",
@@ -185,6 +194,15 @@
 		],
 		"parameters": {
 			"errorcode": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			},
+			"FileSystem": {
+				"type": "string"
+			},
+			"Directory": {
 				"type": "string"
 			}
 		},
